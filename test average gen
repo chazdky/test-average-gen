@@ -1,0 +1,32 @@
+#Declaring Variables
+testScores = []
+test = 0.0
+average = 0.0
+i = 0
+totalScores = 0.0
+total = 0.0
+j = 0.0
+
+
+#using a while loop to get user info
+while i >= 0.0:
+    test = int(float(input("please enter a test score. enter 9999 when finished.")))
+    if test >= 0 and test <= 120:
+        testScores.append(test)
+    elif test == 9999:
+        print("You have exited the program. please wait while we crunch the numbers.")
+        break
+    elif test <= 0 or test >= 120:
+        print("You have entered an incorrect number. please try again.")
+
+
+#calculating a total with a for loop
+for test in testScores:
+    total = int(float(total + test))
+
+#calculating average    
+j = len(testScores)
+average = int(float(total / j))
+
+#giving the user the calculated info
+print("You have entered %.1f " %j, " and your average is %.1f " %average)
